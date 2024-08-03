@@ -1,0 +1,17 @@
+.menuSuperior{
+    list-style: none;
+    text-align: center;
+    margin: 1rem;
+}
+.menuSuperior li {
+    display: inline-block;
+    padding: 1rem;
+    
+}
+.menuTexto {
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    padding: 2rem;
+    font-size: 1.8rem;
+}

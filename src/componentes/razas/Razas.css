@@ -1,0 +1,73 @@
+.bodyhome2 {
+    display: grid;
+    grid-template-areas:
+        "encabezadoRazas encabezadoRazas"
+        "imgA textimgA"
+        "imgB textimgB"
+        "imgC textimgC"
+        "imgD textimgD";
+        grid-column: 1fr 1fr;
+        grid-template-rows: 1fr 2fr 2fr 2fr 2fr;
+        height: 100vh;
+        column-gap: none;
+        row-gap: 1rem;
+    
+}
+.imgA {
+    grid-area: imgA;
+    background-color: rgb(240, 195, 223);
+}
+
+.textimgA {
+    grid-area: textA;
+    background-color: rgb(240, 195, 223);
+}
+
+.imgB {
+    grid-area: imgB;
+    background-color: rgb(240, 195, 223);
+}
+
+.textimgB {
+    grid-area: textB;
+    background-color: rgb(240, 195, 223);
+}
+
+.imgC {
+    grid-area: imgC;
+    background-color: rgb(240, 195, 223);
+}
+
+.textimgC {
+    grid-area: textC;
+    background-color: rgb(240, 195, 223);
+}
+
+.imgD {
+    grid-area: imgD;
+    background-color: rgb(240, 195, 223);
+}
+
+.textimgD {
+    grid-area: textD;
+    background-color: rgb(240, 195, 223);
+}
+
+.imgRazas {
+    padding: 0.5rem;
+    width: 90%;
+}
+
+.imgRazas img {
+    width: 100%;
+    margin-top: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.textRazas {
+    font-size: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    margin-right: 0.4rem;
+    float: right;
+}

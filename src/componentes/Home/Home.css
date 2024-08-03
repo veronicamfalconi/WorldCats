@@ -1,0 +1,46 @@
+
+
+.bodyhome {
+    display: grid;
+    grid-template-areas: 
+    "objetivos objetivos sugerencias"
+    "boxmodel boxmodel sugerencias";
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    height: 100vh;
+    column-gap: 0.5rem;
+    row-gap: 0.5rem;
+    background-color:  rgba(240, 219, 232, 0.932) ;
+}
+
+.objetivos {
+    background-color: rgba(240, 219, 232, 0.932);
+    grid-area: vida;
+    padding: 1rem;
+}
+
+.boxmodel {
+    background-color: rgba(240, 219, 232, 0.932);
+    grid-area: boxmodel;
+    display: inline-block;
+}
+
+.boxmodel1,
+.boxmodel2 {
+    float: left;
+    background-color: rgb(240, 195, 223);
+    width: 28rem;
+    height: 20rem;
+    padding: 1rem 1rem;
+    margin: 0.3rem;
+    overflow: auto;
+    border: solid 1px black;
+}
+.sugerencias {
+    /*background-color: rgb(240, 195, 223);*/
+    background-image: linear-gradient(rgb(241, 158, 209), rgb(245, 230, 239));
+    grid-area: sugerencias;
+    padding: 2.2rem;
+    line-height: 2.5rem;
+
+}

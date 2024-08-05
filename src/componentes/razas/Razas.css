@@ -13,13 +13,16 @@
         row-gap: 1rem;
     
 }
+.encabezadoRazas{
+    grid-area: encabezadoRazas;
+}
 .imgA {
     grid-area: imgA;
     background-color: rgb(240, 195, 223);
 }
 
 .textimgA {
-    grid-area: textA;
+    grid-area: textimgA;
     background-color: rgb(240, 195, 223);
 }
 
@@ -29,7 +32,7 @@
 }
 
 .textimgB {
-    grid-area: textB;
+    grid-area: textimgB;
     background-color: rgb(240, 195, 223);
 }
 
@@ -39,7 +42,7 @@
 }
 
 .textimgC {
-    grid-area: textC;
+    grid-area: textimgC;
     background-color: rgb(240, 195, 223);
 }
 
@@ -49,7 +52,7 @@
 }
 
 .textimgD {
-    grid-area: textD;
+    grid-area: textimgD;
     background-color: rgb(240, 195, 223);
 }
 

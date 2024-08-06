@@ -1,84 +1,118 @@
-import React, { Component } from 'react';
-import axios from 'axios';
-import './Razas.css';
+import React, { Component } from "react";
+import axios from "axios";
+import "./Razas.css";
 
-axios.defaults.baseURL = 'https://api.thecatapi.com/v1';
-axios.defaults.headers.common['live_4nPRiI59hQyHWF0vSRDKYlyL7T7hNF4M2czdfkDPtWNzRDR8WURiSpi3mAbq58jT'] = 'DEMO-API-KEY';
+axios.defaults.baseURL = "https://api.thecatapi.com/v1";
+axios.defaults.headers.common[
+  "live_4nPRiI59hQyHWF0vSRDKYlyL7T7hNF4M2czdfkDPtWNzRDR8WURiSpi3mAbq58jT"
+] = "DEMO-API-KEY";
 
 class Razas extends Component {
-
-  async getBreeds() {
-      const res = await axios('/breeds');
-      return res.data;
-  }
-  async getCatsImagesByBreed(breed_id, amount) {
-      const res = await axios('/images/search?breed_ids='+breed_id + "&limit="+ amount);
-      
-      console.table(res.data)
-      return res.data;
-  }
-
-  async loadBreedImages() {
-    console.log('Load Breed Images:', this.state.selected_breed)
-
-    let breed_images = await this.getCatsImagesByBreed(this.state.selected_breed, 5)
-
-    this.setState({ images: breed_images });
-  }
-
   constructor(...args) {
-
-      super(...args);
-      this.state = {
-        images: [],
-        breeds: [], 
-        selected_breed: 0
-      };
+    super(...args);
+    this.state = {
+      images: [],
+      breeds: [],
+      selected_breed: 0,
+    };
 
     this.onBreedSelectChange = this.onBreedSelectChange.bind(this);
   }
+
+  async getBreeds() {
+    const res = await axios("/breeds");
+    return res.data;
+  }
+
+  async getCatsImagesByBreed(breed_id, amount) {
+    const res = await axios(
+      "/images/search?breed_ids=" + breed_id + "&limit=" + amount
+    );
+
+    console.table(res.data);
+    return res.data;
+  }
+
+  async loadBreedImages() {
+    console.log("Load Breed Images:", this.state.selected_breed);
+    let breed_images = await this.getCatsImagesByBreed(
+      this.state.selected_breed,
+      1
+    );
+    this.setState({ images: breed_images });
+  }
+
   async onBreedSelectChange(e) {
-    console.log("Breed Selected. ID:",e.target.value)
-    await this.setState({selected_breed:e.target.value});
+    console.log("Breed Selected. ID:", e.target.value);
+    await this.setState({ selected_breed: e.target.value });
     await this.loadBreedImages();
   }
-  componentDidMount() {
-      if (this.state.breeds.length===0) {
-          (async () => {
-              try {
-                  this.setState({breeds: await this.getBreeds()});
-              } catch (e) {
-                  //...handle the error...
-                  console.error(e)
-              }
-          })();
+
+  async componentDidMount() {
+    if (this.state.breeds.length === 0) {
+      try {
+        this.setState({ breeds: await this.getBreeds() });
+      } catch (e) {
+        console.error(e);
       }
+    }
   }
+
   render() {
-      return (
-        <div>
+    const selectedBreed = this.state.breeds.find(
+      (breed) => breed.id == this.state.selected_breed
+    );
 
-      <select value={this.state.selected_breed} 
-              onChange={this.onBreedSelectChange}>
-        {this.state.breeds.map((breed) => <option key={breed.id} value={breed.id}>{breed.name}</option>)}
-      </select>
+    return (
+      <div className="bodyhome-razas">
+        <h3 className="h3-razas">
+          Aqui podran encontrar un despliegue de todas las Razas de Gatos, sus
+          pelajes y caracteristicas distinguidas de cada una.
+        </h3>
 
-      <div>
-     {this.state.images.map((image) => <img className="cat-image" alt="" src={image.url}></img>)}
-     </div>
+        <p className="p-Razas">
+          Haga click en la Raza que desee ver en detalle:
+        </p>
 
-     </div>
-      );
+        <select
+          className="selector-Razas"
+          value={this.state.selected_breed}
+          onChange={this.onBreedSelectChange}
+        >
+          {this.state.breeds.map((breed) => (
+            <option key={breed.id} value={breed.id}>
+              {breed.name}
+            </option>
+          ))}
+        </select>
+
+        <div className="cat-info">
+          {this.state.images.map((image) => (
+            <img className="cat-image" alt="" src={image.url} key={image.id} />
+          ))}
+          {selectedBreed && (
+            <div className="breed-details">
+              <h2>Descripción:</h2>
+              <p>{selectedBreed.description}</p>
+              <h2>Orígenes:</h2>
+              <p>{selectedBreed.origin}</p>
+              <h2>Temperamento:</h2>
+              <p>{selectedBreed.temperament}</p>
+            </div>
+          )}
+        </div>
+      </div>
+    );
   }
 }
 
-
-/* import { useEffect, useState } from "react";
+/* 
+import { useEffect, useState } from "react";
 import { fetchRazas } from "./api";
 import "./Razas.css"
 import { Link } from "react-router-dom";
 
-function ListaRazas() {
+function Razas() {
   const [razas, setRazas] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -119,7 +153,7 @@ function ListaRazas() {
 }
 
 
-
+/*
  
 import "./Razas.css";
 import bengala from "../../assets/imgRazas/bengala.jpg";

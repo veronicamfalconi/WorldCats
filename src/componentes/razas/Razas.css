@@ -1,40 +1,43 @@
-.Razas {
-    text-align: center;
-  }
-  
-  .Razas-logo {
-    animation: App-logo-spin infinite 20s linear;
-    height: 40vmin;
-  }
-  
-  .Razas-header {
-    background-color: #282c34;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
-  }
-  
-  .Razas-link {
-    color: #61dafb;
-  }
-  .cat-image {
-    max-width: 200px;
-    max-height: 200px;
-  }
-  
-  @keyframes Razas-logo-spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
+.bodyhome-razas{
+  background-color: #f1dce9;
+  height: 100%;
+  padding: 1rem 2rem;
+  font-size: 0.9rem;
+}
+.h3-razas{
+  display: grid;
+  text-align: center;
+}
+.cat-info {
+  text-align: center; 
+  margin-top: 20px;
+}
+
+.breed-details {
+  background-color: #f0f4f8; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para el contenedor */
+  margin-top: 1rem; 
   }
 
+.breed-details h2 {
+  margin: 10px 0 5px; 
+  color: #333; 
+}
+
+.breed-details p { 
+  color: #555; 
+  line-height: 1.5; 
+}
+
+  
+  .cat-image {
+    max-width: 18rem;
+    max-height: 18rem;
+    border-radius: 0.5rem;
+  }
+  
+  
 /*
 .bodyhome2 {
     display: grid;

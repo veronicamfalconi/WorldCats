@@ -1,9 +1,56 @@
-import './Footer.css'
+ import "./Footer.css";
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import { Stack } from "react-bootstrap";
+import logo from "../../assets/imgRazas/logo.jpg";
+
 function Footer() {
-    return (
-      <footer className="footer">
-        <p>Derechos reservados</p>
-      </footer>
-    );
-  }
-  export default Footer
+  return (
+    <Container fluid className="bg-light text-danger p-4">
+      <Row className="align-items-center justify-content-center">
+        <Col md="auto" className="text-center mb-4 mb-md-0 mx-5">
+          <Stack className="align-items-center">
+            <img
+              alt=""
+              src={logo}
+              rounded
+              width="150"
+              height="150"
+              className="d-inline-block align-top"
+            />{" "}
+            <h5>Tienda de Gatos</h5>
+          </Stack>
+        </Col>
+
+        <Col md="auto" className="text-center mb-4 mb-md-0 fs-6 mx-5">
+          <h4>Contactanos!</h4>
+          <p>Email: veronicamfalconi@gmail.com</p>
+          <p>Cel. 1166668888</p>
+          <p>742 Evergreen Terrace</p>
+          <p className="text-black">Derechos reservados ©</p>
+          <p className="text-black">Hecho por Alexia Corach y Veronica Falconi</p>
+        </Col>
+
+        <Col md="auto" className="text-center mx-5">
+          <Nav className="flex-column fs-5">
+            <Nav.Link href="/" className="text-danger p-1 fs-5">
+              Inicio
+            </Nav.Link>
+
+            <Nav.Link href="/Razas" className="text-danger p-1 fs-5">
+              Razas
+            </Nav.Link>
+
+            <Nav.Link href="/Tienda" className="text-danger p-1 fs-5">
+              Tienda
+            </Nav.Link>
+          </Nav>
+        </Col>
+      </Row>
+    </Container>
+  );
+}
+export default Footer;

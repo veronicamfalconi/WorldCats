@@ -9,6 +9,7 @@ import logo from "../../assets/imgRazas/logo.jpg";
 
 function Footer() {
   return (
+    <div className="footer">
     <Container fluid className="bg-light text-danger p-4">
       <Row xs={1} md={3} lg={3} className="g-5">
         <Col md="auto" className="text-center mb-4 mb-md-0">
@@ -30,7 +31,7 @@ function Footer() {
           <p>Email: veronicamfalconi@gmail.com</p>
           <p>Cel. 1166668888</p>
           <p>742 Evergreen Terrace</p>
-          <p className="text-black">Derechos reservados</p>
+          <p className="text-black">© 2024 Página de Felinos. Todos los derechos reservados</p>
           <p className="text-black">Hecho por Alexia Corach y Veronica Falconi</p>
         </Col>
 
@@ -51,6 +52,7 @@ function Footer() {
         </Col>
       </Row>
     </Container>
+    </div>
   );
 }
 export default Footer;

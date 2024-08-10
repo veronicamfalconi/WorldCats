@@ -16,7 +16,7 @@ function Navegador() {
             height="150"
             className="d-inline-block align-top"
           />{" "}
-          <p>Tienda de Gatos</p>
+          <p>Página de Felinos</p>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">

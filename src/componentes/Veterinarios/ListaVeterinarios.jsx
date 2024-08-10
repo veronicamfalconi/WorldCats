@@ -175,32 +175,29 @@ const ListaVeterinarios = () => {
   );
 
   return (
-    <Container fluid className="containerVeterinario">
-      <Row className="justify-content-center">
-        <Col>
-          <Card>
-            <Card.Body>
-              <Card.Title>Veterinarias 24 horas en Villa Crespo</Card.Title>
-              <Card.Text>
-                A continuación vas a encontrar el horario del resto de las
-                Veterinarias de Villa Crespo.
-                <br />
-                Antes de ir te recomendamos llamar para confirmar que la
-                Veterinaria está de Guardia o tiene turno disponible.
-              </Card.Text>
-            </Card.Body>
-          </Card>
-        </Col>
-      </Row>
+    <Container className="my-5 containerVeterinario p-4 shadow-lg p-3 mb-5 rounded;" style={{ width: "60%" }}>
+      <div className="text-center mb-4">
+        <h1 className="text-center text-danger mb-2">Veterinarias 24 horas en Villa Crespo</h1>
+        <span className="text-center fs-5">
+          A continuación vas a encontrar el horario del resto de las
+          Veterinarias de Villa Crespo.
+          Antes de ir te recomendamos llamar para confirmar que la Veterinaria
+          está de Guardia o tiene turno disponible.
+        </span>
+      </div>
 
-      {veterinarios.map((veterinario) => (
-        <Veterinario
-          key={veterinario.id}
-          veterinario={veterinario}
-          onToggleData={toggleData}
-          onToggleFavorito={toggleFavorito}
-        />
-      ))}
+      <Row className="justify-content-center d-flex flex-column align-items-center">
+        {veterinarios.map((veterinario) => (
+          <Col key={veterinario.id} md={8} lg={7} className="d-flex">
+            <Veterinario
+              key={veterinario.id}
+              veterinario={veterinario}
+              onToggleData={toggleData}
+              onToggleFavorito={toggleFavorito}
+            />
+          </Col>
+        ))}
+      </Row>
 
       {seleccionarVeterinario && (
         <Modal show={true} onHide={closeModal}>
@@ -230,19 +227,23 @@ const ListaVeterinarios = () => {
         </Modal>
       )}
 
-      <h2>Favoritos</h2>
-      {veterinariosFavoritos.length > 0 ? (
-        veterinariosFavoritos.map((veterinario) => (
-          <Veterinario
-            key={veterinario.id}
-            veterinario={veterinario}
-            onToggleFavorito={toggleFavorito}
-            onToggleData={toggleData} // Agregar esta línea si es necesaria en Veterinario
-          />
-        ))
-      ) : (
-        <p>No hay veterinarios favoritos seleccionados.</p>
-      )}
+      <Row className="mt-5">
+        <Col>
+          <h2 className="text-center text-danger">Favoritos</h2>
+          {veterinariosFavoritos.length > 0 ? (
+            veterinariosFavoritos.map((veterinario) => (
+              <Veterinario
+                key={veterinario.id}
+                veterinario={veterinario}
+                onToggleFavorito={toggleFavorito}
+                onToggleData={toggleData} // Agregar esta línea si es necesaria en Veterinario
+              />
+            ))
+          ) : (
+            <p className="fs-5 text-center">No hay veterinarios favoritos seleccionados.</p>
+          )}
+        </Col>
+      </Row>
     </Container>
   );
 };

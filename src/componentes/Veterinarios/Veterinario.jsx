@@ -1,22 +1,22 @@
 import React from "react";
 import Button from "react-bootstrap/Button";
-import Modal from "react-bootstrap/Modal";
 import Card from "react-bootstrap/Card";
 
 const Veterinario = ({ veterinario, onToggleData, onToggleFavorito }) => {
   return (
-    <Card style={{ width: "18rem" }}>
+    <Card className="text-center mb-3 shadow-sm p-3 mb-5 bg-white rounded " style={{ width: "100%" }}>
       <Card.Body>
         <Card.Title>{veterinario.nombre}</Card.Title>
         <Card.Text>
-          <p>Especialidad: {veterinario.especialidad}</p>
+          <span className="custom-italic fs-5">Especialidad: {veterinario.especialidad}</span>
         </Card.Text>
-        <Button variant="primary" onClick={() => onToggleData(veterinario)}>
+        <Button variant="danger" className="fs-9 m-2" onClick={() => onToggleData(veterinario)}>
           Ver Más Información
         </Button>
         <Button
-          variant="primary"
+          variant="danger"
           onClick={() => onToggleFavorito(veterinario.id)}
+          className="ml-2"
         >
           {veterinario.esFavorito
             ? "Eliminar de Favoritos"
@@ -25,7 +25,6 @@ const Veterinario = ({ veterinario, onToggleData, onToggleFavorito }) => {
       </Card.Body>
     </Card>
   );
-
 };
 
 export default Veterinario;

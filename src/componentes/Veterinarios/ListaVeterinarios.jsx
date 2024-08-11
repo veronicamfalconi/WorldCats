@@ -148,6 +148,39 @@ const ListaVeterinarios = () => {
       mostrarData: false,
       esFavorito: false,
     },
+    {
+      id: 14,
+      nombre: "Centro diagnostico Plaza",
+      especialidad: "Diagnostico por imagen",
+      direccion: "Pareja 3088 (Villa Pueyrredon)",
+      telefono: "11 64490999 6091-4554",
+      horarios:
+        "Solcitar turno",
+      mostrarData: false,
+      esFavorito: false,
+    },
+    {
+      id: 15,
+      nombre: "Veterinaria a domicilio",
+      especialidad: "General",
+      direccion: "GBA sur, norte y oeste. CABA",
+      telefono: "11 64490999 6091-4554",
+      horarios:
+        "Solciitar turno",
+      mostrarData: false,
+      esFavorito: false,
+    },
+    {
+      id: 16,
+      nombre: "Radiología Veterinaria a domicilio o en consultorio",
+      especialidad: "Radiología",
+      direccion: "GBA sur, norte y oeste. CABA",
+      telefono: "11 64490999 6091-4554",
+      horarios:
+        "Solciitar turno y cotización",
+      mostrarData: false,
+      esFavorito: false,
+    },
   ]);
 
   const [seleccionarVeterinario, setSeleccionarVeterinario] = useState(null);

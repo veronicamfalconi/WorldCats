@@ -4,7 +4,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import { Stack } from "react-bootstrap";
+import Stack from "react-bootstrap/Stack";
 import logo from "../../assets/imgRazas/logo.jpg";
 
 function Footer() {
@@ -22,7 +22,7 @@ function Footer() {
               height="150"
               className="d-inline-block align-top"
             />{" "}
-            <h5>Tienda de Gatos</h5>
+            <h5>Página de felinos</h5>
           </Stack>
         </Col>
 

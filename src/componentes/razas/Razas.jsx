@@ -54,7 +54,7 @@ const Razas = () => {
       <h2 className="text-danger text-center">
         ¡Bienvenido al crisol de razas felinas del mundo!
       </h2>
-      <span className="fs-6">
+      <span className="fs-5">
         Queremos estar seguros de que al elegir un gato le pueda brindar un
         estilo de vida adecuado según sus características. A continuación
         podrá ver cada una de las razas felinas con sus características
@@ -68,7 +68,7 @@ const Razas = () => {
         adopción.
       </span>
 
-      <h4 className="text-muted p-1">
+      <h4 className="text-muted p-2">
         Haga clic para seleccionar una raza:
       </h4>
 
@@ -91,12 +91,12 @@ const Razas = () => {
           ))}
           {selectedBreedData && (
             <div className="breed-details">
-              <h2>Descripción:</h2>
-              <p>{selectedBreedData.description}</p>
-              <h2>Orígenes:</h2>
-              <p>{selectedBreedData.origin}</p>
-              <h2>Temperamento:</h2>
-              <p>{selectedBreedData.temperament}</p>
+              <h2 className="fs-2 text-danger">Descripción:</h2>
+              <p className="fs-5">{selectedBreedData.description}</p>
+              <h2 className="fs-2 text-danger">Orígenes:</h2>
+              <p className="fs-5">{selectedBreedData.origin}</p>
+              <h2 className="fs-2 text-danger">Temperamento:</h2>
+              <p className="fs-5">{selectedBreedData.temperament}</p>
             </div>
           )}
         </Card.Body>

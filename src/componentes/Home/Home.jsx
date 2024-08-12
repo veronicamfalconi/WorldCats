@@ -9,15 +9,19 @@ import imagenSeis from "../../assets/imgCarrusel/imagenSeis.jpg";
 import imagenSiete from "../../assets/imgCarrusel/imagenSiete.jpg";
 import Carrusel from "./Carrusel.jsx";
 import Container from "react-bootstrap/Container";
+import React, { useEffect } from 'react';
+
 
 function Home() {
+
   return (
     <div className="bodyhome">
       <section className="objetivos">
-        <h1 className="text-danger text-center mb-4">
+        <h1 className="text-danger text-center mb-4 wow animate__animated animate__fadeIn">
           ¡Bienvenido a la página de felinos!
         </h1>
-        <p className="fs-5 custom-italic">
+        <Carrusel className="carousel-container" />
+        <p className="fs-5 custom-italic p-5 pb-0">
           Somos amantes de los animales y queremos compartir nuestra sabiduría
           sobre los gatos para ayudar a las personas que busca adoptar un nuevo
           integrante en la familia. Te invitamos a conocer el mundo de estos
@@ -30,7 +34,7 @@ function Home() {
       <section className="boxmodel">
         <div className="boxmodel1">
           <h2>Historia y Orígenes</h2>
-          <p className="fs-6 custom-italic">
+          <p className="fs-5 custom-italic">
             Los gatos comparten un antepasado común probablemente relacionado
             con los Aitanis. Los Aitanis era pequeños carnívoros de los bosques
             que aparecieron hace alrededor de 60 millones de años. Tenían un
@@ -94,7 +98,7 @@ function Home() {
             </li>
           </ul>
         </div>
-        <h3>Enlace Útiles</h3>
+        <h3>Enlaces Útiles</h3>
         <div className="listaLibros">
           <ul>
             <li>
@@ -126,7 +130,7 @@ function Home() {
         </div>
       </aside>
 
-      <Carrusel className="carousel-container" />
+
     </div>
   );
 }

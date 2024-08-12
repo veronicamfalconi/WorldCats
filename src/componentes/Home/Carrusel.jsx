@@ -11,14 +11,14 @@ import imagenSiete from "../../assets/imgCarrusel/imagenSiete.jpg";
 function Carrusel() {
 
     return (
-        <Carousel fade>
-    <Carousel.Item>
+        <Carousel fade className="carousel">
+    <Carousel.Item className="carouselItem">
       <img fluid src={imagenUno} alt="First slide" className="carousel-image" />
       <Carousel.Caption>
         <h3 className="fs-5 custom-italic text-black">Según la ciencia ser amante de los gatos es bueno para la mente y el cuerpo</h3>
       </Carousel.Caption>
     </Carousel.Item>
-    <Carousel.Item>
+    <Carousel.Item className="carouselItem">
       <img fluid src={imagenDos} alt="Second slide" className="carousel-image" />
       <Carousel.Caption>
         <h3 className="fs-5 custom-italic text-black">Son un antiestrés natural</h3>
@@ -30,7 +30,7 @@ function Carrusel() {
         </p>
       </Carousel.Caption>
     </Carousel.Item>
-    <Carousel.Item>
+    <Carousel.Item className="carouselItem">
       <img fluid src={imagenTres} alt="Third slide" className="carousel-image" />
       <Carousel.Caption>
         <h3 className="fs-5 custom-italic text-black">Ayuda a controlar las enfermedades cardíacas, los accidentes cerebrovasculares y los ataques cardíacos</h3>
@@ -42,7 +42,7 @@ function Carrusel() {
         </p>
       </Carousel.Caption>
     </Carousel.Item>
-    <Carousel.Item>
+    <Carousel.Item className="carouselItem">
       <img fluid src={imagenCuatro} alt="Fourth slide" className="carousel-image" />
       <Carousel.Caption>
         <h3 className="fs-5 custom-italic text-black">Bajan la presión sanguínea</h3>
@@ -54,7 +54,7 @@ function Carrusel() {
         </p>
       </Carousel.Caption>
     </Carousel.Item>
-    <Carousel.Item>
+    <Carousel.Item className="carouselItem">
       <img fluid src={imagenCinco} alt="Fifth slide" className="carousel-image" />
       <Carousel.Caption>
         <h3 className="fs-5 custom-italic text-black">Ayudan a dormir mejor</h3>
@@ -66,7 +66,7 @@ function Carrusel() {
         </p>
       </Carousel.Caption>
     </Carousel.Item>
-    <Carousel.Item>
+    <Carousel.Item className="carouselItem">
       <img fluid src={imagenSeis} alt="Sixth slide" className="carousel-image" />
       <Carousel.Caption>
         <h3 className="fs-5 custom-italic text-black">Hacen bien a nuestros huesos</h3>
@@ -78,7 +78,7 @@ function Carrusel() {
         </p>
       </Carousel.Caption>
     </Carousel.Item>
-    <Carousel.Item>
+    <Carousel.Item className="carouselItem">
       <img fluid src={imagenSiete} alt="Seventh slide" className="carousel-image" />
       <Carousel.Caption className="fs-5 custom-italic">
         <h3 className="fs-5 custom-italic text-black">Potencian nuestro sistema inmunitario</h3>

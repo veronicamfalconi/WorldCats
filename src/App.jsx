@@ -19,7 +19,7 @@ function App() {
         <p className="wow animate__animated animate__fadeIn"></p>
         <Navegador />
         <main>
-          <Routes>
+          <Routes basename="/WorldCats">
             <Route path="/" element={<Home />} />
             <Route path="/razas" element={<Razas />} />
             <Route path="/veterinarios" element={<ListaVeterinarios />} />

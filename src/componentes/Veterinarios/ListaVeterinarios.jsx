@@ -3,7 +3,6 @@ import "./veterinario.css";
 import Veterinario from "./Veterinario";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
-import Card from "react-bootstrap/Card";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -208,12 +207,12 @@ const ListaVeterinarios = () => {
   );
 
   return (
-    <Container className="my-5 containerVeterinario p-4 shadow-lg p-3 mb-5 rounded;" style={{ width: "60%" }}>
+    <Container className="containerVets my-5 containerVeterinario p-4 shadow-lg p-3 mb-5 rounded;">
       <div className="text-center mb-4">
         <h1 className="text-center text-danger mb-2">Veterinarias 24 horas en Villa Crespo</h1>
         <span className="text-center fs-5">
-          A continuación vas a encontrar el horario del resto de las
-          Veterinarias de Villa Crespo.
+          A continuación vas a encontrar el horario de las
+          Veterinarias ubicadas en Villa Crespo.
           Antes de ir te recomendamos llamar para confirmar que la Veterinaria
           está de Guardia o tiene turno disponible.
         </span>
@@ -269,7 +268,7 @@ const ListaVeterinarios = () => {
                 key={veterinario.id}
                 veterinario={veterinario}
                 onToggleFavorito={toggleFavorito}
-                onToggleData={toggleData} // Agregar esta línea si es necesaria en Veterinario
+                onToggleData={toggleData}
               />
             ))
           ) : (
